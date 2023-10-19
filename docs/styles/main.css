@@ -9756,9 +9756,12 @@ body {
 
 /* Home Page Style */
 .ww-home-page {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/DSC_6623.jpg") no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/photos/photo1.jpg") no-repeat center center;
+    /* background: url("../images/photos/photo1.jpg") no-repeat center center; */
+    /* background-size: contain; */
     background-size: cover;
-    background-position: 50%;
+    background-position: 40% center; /* Moved a bit to the left */
+    background-position: 0% center; /* Moved all the way to the left */
     height: 100vh;
     min-height: 480px;
 }
@@ -9767,7 +9770,8 @@ body {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
-    height: 140%;
+    /* height: 140%; */
+    height: 50%;
     text-align: center;
     color: #fff;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);

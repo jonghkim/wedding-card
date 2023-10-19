@@ -9760,7 +9760,7 @@ body {
     /* background: url("../images/photos/photo1.jpg") no-repeat center center; */
     /* background-size: contain; */
     background-size: cover;
-    background-position: center; 
+    background-position: 61% center; /* Moved all the way to the left */
     height: 100vh;
     min-height: 480px;
 }

@@ -9795,7 +9795,19 @@ body {
     }
 }
 
-.ww-home-page .ww-wedding-announcement .ww-couple-name {
+/* Base Styles - For larger screens by default */
+.ww-couple-name {
+    font-size: 4em;
+}
+
+/* For mobile screens */
+@media (max-width: 576px) {  /* 576px is a common breakpoint for mobile screens, but you can adjust it as needed */
+    .ww-couple-name {
+        font-size: 2.5em;  /* Adjust this value as needed for mobile font size */
+    }
+}
+
+/* .ww-home-page .ww-wedding-announcement .ww-couple-name {
     font-size: 70px;
 }
 
@@ -9803,7 +9815,7 @@ body {
     .ww-home-page .ww-wedding-announcement .ww-couple-name {
         font-size: 50px;
     }
-}
+} */
 
 .ww-home-page:before {
     content: "";

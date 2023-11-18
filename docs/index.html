@@ -294,14 +294,25 @@
             </div>
             <br>
             <div class="button-container col text-center" id="copyButtons">
-                <p class="account-number" style="display:none" data-account="신부">
-                    <b>신부측</b>: 1002-850-217645 <br> 
-                                  (우리은행, 예금주: 강다예) 
-                </p>
-                <p class="account-number" style="display:none" data-account="신랑">
-                    <b>신랑측</b>: 1002-241-139751 <br> 
-                                  (우리은행, 예금주: 김종호) 
-                </p>
+                <div class="row text-center">
+                    <div class="col">
+                        <p class="account-number" style="display:none" data-account="신부">
+                            <b>신부측</b>: 1002-850-217645 <br> 
+                                          (우리은행, 예금주: 강다예) 
+                        </p>
+                     </div>
+                     <div class="col">
+                        <p class="account-number" style="display:none" data-account="신랑">
+                            <b>신랑측 혼주</b>: 1002-241-139751 <br> 
+                                          (우리은행, 예금주: 김종호) 
+                                          <br><br>
+                            <b>신랑측 아버님</b>: 352-1282-0822-63 <br>
+                                          (농협은행, 예금주: 김갑주)
+                                          <br><br>
+                            <b>신랑측 어머님</b>: 221-12-003201-2 <br>
+                                          (부산은행, 예금주: 추보민)
+                        </p>        
+                 </div>     
             </div>
         </div>
     </div>
@@ -335,7 +346,7 @@
 
 <script>
 
-    var accountNumbers = [123, 1002241139751];
+//     var accountNumbers = [123, 1002241139751];
 
     function showAccountNumbers() {
         var showAccountButton = document.getElementById('showAccountButton');
@@ -345,27 +356,27 @@
         for (var i = 0; i < accountNumberElements.length; i++) {
             var accountType = accountNumberElements[i].getAttribute('data-account');
             var copyButton = document.createElement('button');
-            copyButton.className = 'copy-button';
-            copyButton.textContent = `${accountType} 계좌번호 복사하기`;
-            copyButton.onclick = createCopyFunction(accountType);
+            // copyButton.className = 'copy-button';
+            // copyButton.textContent = `${accountType} 계좌번호 복사하기`;
+            // copyButton.onclick = createCopyFunction(accountType);
             accountNumberElements[i].style.display = 'block';
-            accountNumberElements[i].appendChild(copyButton);
+            // accountNumberElements[i].appendChild(copyButton);
         }
         showAccountButton.style.display = 'none'; // Hide "번호 보이기" button
     }
 
-    function createCopyFunction(accountType) {
-    return function () {
-        var accountNumber = accountNumbers[accountType === '신부' ? 0 : 1]; // Get the corresponding account number
-        var tempInput = document.createElement('textarea');
-        document.body.appendChild(tempInput);
-        tempInput.value = accountNumber;
-        tempInput.select();
-        document.execCommand('copy');
-        document.body.removeChild(tempInput);
-        alert(`${accountType} 계좌번호가 복사되었습니다.`);
-    };
-}
+//     function createCopyFunction(accountType) {
+//     return function () {
+//         var accountNumber = accountNumbers[accountType === '신부' ? 0 : 1]; // Get the corresponding account number
+//         var tempInput = document.createElement('textarea');
+//         document.body.appendChild(tempInput);
+//         tempInput.value = accountNumber;
+//         tempInput.select();
+//         document.execCommand('copy');
+//         document.body.removeChild(tempInput);
+//         alert(`${accountType} 계좌번호가 복사되었습니다.`);
+//     };
+// }
 
 
 window.onload = function() {
